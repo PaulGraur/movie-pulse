@@ -35,7 +35,7 @@ const MovieCastSection: FC<Props> = ({ movieId }) => {
 
   return (
     <section className="container">
-      <div className="mx-auto p-[40px] bg-[#fff] rounded-[32px]">
+      <div className="mx-auto p-[40px] backdrop-blur-lg bg-white/30 border border-white/40 rounded-[32px]">
         <h2 className="text-[32px] text-center mb-[40px]">Cast</h2>
 
         <Carousel

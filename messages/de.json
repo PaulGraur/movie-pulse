@@ -1,1 +1,5 @@
-{ "welcome": "Welcome" }
+{
+  "header": {
+    "headerRandomizer": "Zufallsgenerator"
+  }
+}

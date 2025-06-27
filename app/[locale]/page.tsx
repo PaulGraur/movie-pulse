@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import MovieDetailsSection from "@/app/section/MovieDetailsSection";
-import MovieCastSection from "@/app/section/MovieCastSection";
-import MovieReviewsSection from "@/app/section/MovieReviewsSection";
+
 import { fetchMovieDetails } from "@/service/api";
 
 interface HomeProps {
@@ -34,13 +32,6 @@ export default function Home({ locale, selectedMovieId }: HomeProps) {
 
   return (
     <div className="container mx-auto p-8 pb-20">
-      {movieDetails && (
-        <>
-          <MovieDetailsSection movie={movieDetails} />
-          <MovieCastSection movieId={selectedMovieId} />
-          <MovieReviewsSection movieId={selectedMovieId} />
-        </>
-      )}
     </div>
   );
 }

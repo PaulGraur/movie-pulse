@@ -14,6 +14,7 @@ import Burger from "@/images/burger.svg";
 
 import Modal from "@/components/Modal";
 import { useModal } from "@/hooks/useModal";
+import { useTranslations } from "next-intl";
 
 interface MovieResult {
   id: number;
@@ -27,6 +28,7 @@ interface HeaderProps {
 }
 
 const HeaderComponent: FC<HeaderProps> = ({ locale }) => {
+  const t = useTranslations("header");
   const { isOpen, open, close } = useModal();
 
   const [selectedMovieId, setSelectedMovieId] = useState<number | null>(null);
@@ -120,16 +122,20 @@ const HeaderComponent: FC<HeaderProps> = ({ locale }) => {
 
   return (
     <header className="lg:container lg:mt-[20px]">
-      <div className="px-[20px] py-[16px] bg-[#fff] shadow-[0_0_25px_#00000025] lg:rounded-[90px] flex justify-between items-center gap-[22px] relative z-50">
-        <Link href="/">
-          <Image
-            src={Logo}
-            alt="Logo"
-            width={60}
-            height={60}
-            className="object-cover"
-          />
-        </Link>
+      <div className="px-[20px] py-[16px] backdrop-blur-lg bg-white/30 border border-white/40 shadow-[0_0_25px_#00000025] lg:rounded-[90px] flex justify-between items-center gap-[22px] relative z-50">
+        <div className="flex items-center gap-[22px]">
+          <Link href="/">
+            <Image
+              src={Logo}
+              alt="Logo"
+              width={60}
+              height={60}
+              className="object-cover"
+            />
+          </Link>
+
+          <Link href="/randomizer">{t("headerRandomizer")}</Link>
+        </div>
 
         <form onSubmit={onSearch} className="flex gap-4 w-[700px] relative">
           <input

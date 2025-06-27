@@ -41,7 +41,7 @@ const MovieReviewsSection: FC<Props> = ({ movieId }) => {
 
   return (
     <section className="container">
-      <div className="mx-auto p-[40px] bg-[#fff] rounded-[32px]">
+      <div className="mx-auto p-[40px] backdrop-blur-lg bg-white/30 border border-white/40 rounded-[32px]">
         <h2 className="text-2xl font-semibold mb-6">Reviews</h2>
 
         <div className="flex flex-col gap-6">

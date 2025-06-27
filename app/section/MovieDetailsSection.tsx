@@ -21,7 +21,7 @@ const MovieDetailsSection: FC<Props> = ({ movie, className }) => {
   return (
     <section className="container">
       <div
-        className={`${className} container mx-auto px-[16px] py-[40px] bg-[#fff] rounded-[32px] `}
+        className="container mx-auto px-[16px] py-[40px] backdrop-blur-lg bg-white/30 border border-white/40 rounded-[32px]"
       >
         <div className="flex gap-[40px]">
           <Image
