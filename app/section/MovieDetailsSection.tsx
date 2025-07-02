@@ -20,9 +20,7 @@ interface Props {
 const MovieDetailsSection: FC<Props> = ({ movie, className }) => {
   return (
     <section className="container">
-      <div
-        className="container mx-auto px-[16px] py-[40px] backdrop-blur-lg bg-white/30 border border-white/40 rounded-[32px]"
-      >
+      <div className="container mx-auto px-[16px] py-[40px] backdrop-blur-lg bg-white/30 border border-white/40 rounded-[32px]">
         <div className="flex gap-[40px]">
           <Image
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -40,10 +38,12 @@ const MovieDetailsSection: FC<Props> = ({ movie, className }) => {
 
             <div className="mt-auto">
               <p>
-                <strong>Release Date:</strong> {movie.release_date}
+                <span className="font-bold">Release Date:</span>{" "}
+                {movie.release_date}
               </p>
               <p>
-                <strong>Rating:</strong> {movie.vote_average.toFixed(1)} / 10
+                <span className="font-bold">Rating:</span>{" "}
+                {movie.vote_average.toFixed(1)} / 10
               </p>
             </div>
           </div>

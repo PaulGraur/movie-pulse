@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Filters from "@/components/Filters";
 import MovieCard from "@/components/MovieCard";
 import { useApi } from "@/hooks/useApi";
+import { useTranslations } from "next-intl";
 
 interface Genre {
   id: number;
@@ -22,6 +23,8 @@ interface Movie {
 const MovieRandomizerSection = () => {
   const api = useApi();
   const { fetchGenres, fetchMoviesByFilters } = api;
+
+  const t = useTranslations("randomizerPage");
 
   const [genres, setGenres] = useState<Genre[]>([]);
   const [selectedGenre, setSelectedGenre] = useState<number | null>(null);
@@ -103,7 +106,7 @@ const MovieRandomizerSection = () => {
     <section className="container">
       <div className="mx-auto p-[40px] backdrop-blur-lg bg-white/30 border border-white/40 rounded-[32px] flex flex-col items-center">
         <h1 className="text-4xl font-extrabold mb-6 text-center">
-          Movie Randomizer
+          {t("randomizerTitle")}
         </h1>
         <Filters
           genres={genres}
@@ -137,14 +140,14 @@ const MovieRandomizerSection = () => {
           <button
             onClick={handleRandomize}
             disabled={loading || movies.length === 0}
-            className="px-8 py-3 bg-blue-600 text-white rounded-[32px] hover:bg-blue-700 disabled:opacity-50"
+            className="px-8 py-3 bg-[#00bbf9] text-snow rounded-[32px] disabled:opacity-50"
           >
-            {loading ? "Loading..." : "Randomize"}
+            {loading ? "Loading..." : t("aplayButton")}
           </button>
 
-          <p className="mt-2 text-gray-700">
-            Found: <strong>{movies.length}</strong> movie
-            {movies.length !== 1 ? "s" : ""}
+          <p className="mt-2 text-slate">
+            {t("randomizerFound")}: <strong>{movies.length}</strong>{" "}
+            {t("randomizerMovies")}
           </p>
 
           {error && <p className="mt-4 text-red-600">{error}</p>}

@@ -48,10 +48,10 @@ const MovieReviewsSection: FC<Props> = ({ movieId }) => {
           {reviews.map((review) => (
             <div
               key={review.id}
-              className="bg-zinc-800 p-4 rounded shadow hover:bg-zinc-700 transition"
+              className="backdrop-blur-lg bg-white/30 p-4 shadow rounded-[32px] transition"
             >
               <p className="text-sm italic mb-2">By: {review.author}</p>
-              <p className="text-gray-300 mb-2 line-clamp-5">
+              <p className="text-slate mb-2 line-clamp-5">
                 {review.content}
               </p>
               <a

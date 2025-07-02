@@ -15,7 +15,7 @@ const CastCard: FC<Props> = ({ name, character, profilePath }) => {
     "object-cover rounded-[32px] w-[340px] h-[400px] mb-[32px]";
 
   return (
-    <div className="text-center bg-[#ffffff] shadow-cast-card rounded-[32px]">
+    <div className="text-center backdrop-blur-lg bg-white/30 shadow-cast-card rounded-[32px] px-[8px] pt-[8px] pb-[24px]">
       <div className="">
         {profilePath ? (
           <Image
@@ -36,8 +36,8 @@ const CastCard: FC<Props> = ({ name, character, profilePath }) => {
         )}
       </div>
 
-      <p className="text-[28px] text-[#1d1d1d] mb-[4px]">{name}</p>
-      <p className="text-[14px] text-[#1d1d1d]">as {character}</p>
+      <p className="text-[28px] text-obsidian mb-[4px] h-[88px]">{name}</p>
+      <p className="text-[14px] text-obsidian">as {character}</p>
     </div>
   );
 };

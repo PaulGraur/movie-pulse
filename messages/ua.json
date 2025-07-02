@@ -1,5 +1,31 @@
 {
   "header": {
-    "headerRandomizer": "Рандомайзер"
+    "headerRandomizer": "Рандомайзер фільмів",
+    "headerSearch": "Пошук фільму..."
+  },
+
+  "notice": {
+    "noMovieSelected": "Будь ласка, виберіть фільм, щоб переглянути деталі."
+  },
+
+  "randomizerPage": {
+    "randomizerTitle": "Рандомайзер фільмів",
+    "randomizerGenre": "Жанр",
+    "randomizerRating": "Мін. рейтинг",
+    "randomizerYearFrom": "Рік від",
+    "randomizerYearTo": "Рік до",
+    "randomizerLanguage": "Мова",
+    "randomizerAny": "Будь який",
+    "randomizerSort": {
+      "randomizerSortBy": "Сортувати за",
+      "randomizerPopularity": "Популярністю",
+      "randomizerPopularity1": "Рейтингом",
+      "randomizerPopularity2": "Датою виходу"
+    },
+    "randomizer18": "Включати дорослі фільми (18+)",
+    "randomizerFound": "Знайдено",
+    "randomizerMovies": "фільмів",
+    "clearButton": "Очистити фільтри",
+    "aplayButton": "Згенерувати"
   }
 }

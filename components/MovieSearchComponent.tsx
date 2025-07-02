@@ -52,7 +52,7 @@ const MovieSearchComponent: FC<Props> = ({
           ) : (
             <Image src={NoImage} alt="No Image" className={`${castomStyles}`} />
           )}
-          <p className="flex flex-col p-2 text-left text-[#1d1d1d]">
+          <p className="flex flex-col p-2 text-left text-obsidian">
             <span className="font-extrabold text-[18px]">{movie.title}</span>
             <span className="text-[14px]">{movie.release_date}</span>
           </p>

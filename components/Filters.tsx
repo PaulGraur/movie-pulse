@@ -1,6 +1,7 @@
 "use client";
 
 import React, { FC } from "react";
+import { useTranslations } from "next-intl";
 
 interface FiltersProps {
   genres: { id: number; name: string }[];
@@ -62,10 +63,14 @@ const Filters: FC<FiltersProps> = ({
   setIncludeAdult,
   onClear,
 }) => {
+  const t = useTranslations("randomizerPage");
+
   return (
     <div className="w-full backdrop-blur-lg bg-white/30 border border-white/40 rounded-xl p-8 shadow-xl grid grid-cols-1 md:grid-cols-4 gap-6">
       <div>
-        <label className="block mb-1 font-semibold">Genre</label>
+        <label className="block mb-1 font-semibold">
+          {t("randomizerGenre")}
+        </label>
         <select
           className="w-full p-2 border rounded"
           value={selectedGenre ?? ""}
@@ -83,7 +88,9 @@ const Filters: FC<FiltersProps> = ({
       </div>
 
       <div>
-        <label className="block mb-1 font-semibold">Min Rating</label>
+        <label className="block mb-1 font-semibold">
+          {t("randomizerRating")}
+        </label>
         <input
           type="number"
           min={0}
@@ -97,7 +104,9 @@ const Filters: FC<FiltersProps> = ({
       </div>
 
       <div>
-        <label className="block mb-1 font-semibold">Year From</label>
+        <label className="block mb-1 font-semibold">
+          {t("randomizerYearFrom")}
+        </label>
         <input
           type="number"
           min={1900}
@@ -110,7 +119,9 @@ const Filters: FC<FiltersProps> = ({
       </div>
 
       <div>
-        <label className="block mb-1 font-semibold">Year To</label>
+        <label className="block mb-1 font-semibold">
+          {t("randomizerYearTo")}
+        </label>
         <input
           type="number"
           min={1900}
@@ -123,13 +134,15 @@ const Filters: FC<FiltersProps> = ({
       </div>
 
       <div>
-        <label className="block mb-1 font-semibold">Language</label>
+        <label className="block mb-1 font-semibold">
+          {t("randomizerLanguage")}
+        </label>
         <select
           className="w-full p-2 border rounded"
           value={language ?? ""}
           onChange={(e) => setLanguage(e.target.value || null)}
         >
-          <option value="">Any</option>
+          <option value="">{t("randomizerAny")}</option>
           {languages.map(({ code, name }) => (
             <option key={code} value={code}>
               {name}
@@ -139,7 +152,9 @@ const Filters: FC<FiltersProps> = ({
       </div>
 
       <div>
-        <label className="block mb-1 font-semibold">Sort by</label>
+        <label className="block mb-1 font-semibold">
+          {t("randomizerSort.randomizerSortBy")}
+        </label>
         <select
           className="w-full p-2 border rounded"
           value={sortBy}
@@ -161,16 +176,16 @@ const Filters: FC<FiltersProps> = ({
           onChange={(e) => setIncludeAdult(e.target.checked)}
         />
         <label htmlFor="includeAdult" className="select-none">
-          Include Adult (18+)
+          {t("randomizer18")}
         </label>
       </div>
 
       <div className="flex items-end">
         <button
           onClick={onClear}
-          className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-[32px] w-full"
+          className="px-4 py-2 backdrop-blur-xl bg-[#f15bb5] border border-[#f15bb5] text-snow rounded-[32px] w-full"
         >
-          Clear Filters
+          {t("clearButton")}
         </button>
       </div>
     </div>

@@ -1,5 +1,31 @@
 {
   "header": {
-    "headerRandomizer": "Zufallsgenerator"
+    "headerRandomizer": "Zufallsgenerator",
+    "headerSearch": "Suche nach einem Film..."
+  },
+
+  "notice": {
+    "noMovieSelected": "Bitte wählen Sie einen Film aus, um Details anzuzeigen."
+  },
+
+  "randomizerPage": {
+    "randomizerTitle": "Film-Zufallsgenerator",
+    "randomizerGenre": "Genre",
+    "randomizerRating": "Min. Bewertung",
+    "randomizerYearFrom": "Jahr von",
+    "randomizerYearTo": "Jahr bis",
+    "randomizerLanguage": "Sprache",
+    "randomizerAny": "Any",
+    "randomizerSort": {
+      "randomizerSortBy": "Sortieren nach",
+      "randomizerPopularity": "Popularität",
+      "randomizerPopularity1": "Bewertung",
+      "randomizerPopularity2": "Veröffentlichungsdatum"
+    },
+    "randomizer18": "Erwachsenenfilme (18+) einbeziehen",
+    "randomizerFound": "Gefunden",
+    "randomizerMovies": "Filme",
+    "clearButton": "Filter zurücksetzen",
+    "aplayButton": "Zufallsauswahl"
   }
 }

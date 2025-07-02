@@ -134,7 +134,15 @@ const HeaderComponent: FC<HeaderProps> = ({ locale }) => {
             />
           </Link>
 
-          <Link href="/randomizer">{t("headerRandomizer")}</Link>
+          <Link
+            href="/randomizer"
+            className="relative inline-block text-obsidian transition-colors duration-300 hover:text-persimmon
+             before:absolute before:bottom-0 before:left-1/2 before:h-[2px] before:w-0
+             before:bg-persimmon before:transition-all before:duration-300
+             hover:before:left-0 hover:before:w-full"
+          >
+            {t("headerRandomizer")}
+          </Link>
         </div>
 
         <form onSubmit={onSearch} className="flex gap-4 w-[700px] relative">
@@ -142,8 +150,8 @@ const HeaderComponent: FC<HeaderProps> = ({ locale }) => {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search for a movie..."
-            className="w-full bg-[#fff] pl-[44px] pr-[16px] py-[10px] rounded-[32px] focus:outline-none shadow-[0_0_25px_#00000025] focus:shadow-[0_0_25px_#00000050] hover:shadow-[0_0_25px_#00000050] transition-shadow duration-300 ease-in-out"
+            placeholder={t("headerSearch")}
+            className="w-full bg-snow pl-[44px] pr-[16px] py-[10px] rounded-[32px] focus:outline-none shadow-[0_0_25px_#00000025] focus:shadow-[0_0_25px_#00000050] hover:shadow-[0_0_25px_#00000050] transition-shadow duration-300 ease-in-out"
             onFocus={() => {
               if (results.length || recentMovies.length)
                 setShowResultsDropdown(true);
@@ -160,7 +168,7 @@ const HeaderComponent: FC<HeaderProps> = ({ locale }) => {
           {showResultsDropdown && (
             <div
               ref={dropdownRef}
-              className="absolute top-full p-[12px] left-0 w-[100%] mt-2 max-h-[500px] overflow-auto bg-[#ffffff] shadow-[0_0_25px_#00000075] rounded-[32px] z-50"
+              className="absolute top-full p-[12px] left-0 w-[100%] mt-2 max-h-[500px] overflow-auto bg-snow shadow-[0_0_25px_#00000075] rounded-[32px] z-50"
             >
               {recentMovies.length > 0 && (
                 <>
@@ -216,7 +224,7 @@ const HeaderComponent: FC<HeaderProps> = ({ locale }) => {
           <button
             onClick={open}
             aria-label="Open menu"
-            className="xl:hidden px-0 hover:bg-transparent bg-[#fff]"
+            className="xl:hidden px-0 hover:bg-transparent bg-snow"
           >
             <Image src={Burger} alt="Burger" />
           </button>

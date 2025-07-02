@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-
+import { useTranslations } from "next-intl";
 import { fetchMovieDetails } from "@/service/api";
 
 interface HomeProps {
@@ -10,6 +10,7 @@ interface HomeProps {
 }
 
 export default function Home({ locale, selectedMovieId }: HomeProps) {
+  const t = useTranslations("notice");
   const [movieDetails, setMovieDetails] = useState<any>(null);
 
   useEffect(() => {
@@ -25,13 +26,10 @@ export default function Home({ locale, selectedMovieId }: HomeProps) {
   if (!selectedMovieId) {
     return (
       <div className="container mx-auto p-8 pb-20 text-center text-gray-400">
-        Please select a movie to see details.
+        {t("noMovieSelected")}
       </div>
     );
   }
 
-  return (
-    <div className="container mx-auto p-8 pb-20">
-    </div>
-  );
+  return <div className="container mx-auto p-8 pb-20"></div>;
 }

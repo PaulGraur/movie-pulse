@@ -23,9 +23,10 @@ const config: Config = {
       boxShadow: {},
       dropShadow: {},
       colors: {
-        amethyst: "#7B51A6",
-        silver: "#595959",
-        pearl: "#F5F5F5",
+        snow: "#FFFAFA",
+        slate: "#374151",
+        obsidian: "#202020",
+        persimmon: "#e0633d",
       },
       keyframes: {
         pulse: {},

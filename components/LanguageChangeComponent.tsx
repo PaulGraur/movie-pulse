@@ -111,7 +111,7 @@ const LanguageChangeComponent: FC<LanguageProps> = ({
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0, opacity: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="absolute bg-white flex flex-col gap-[8px] right-[0] w-max shadow-2xl rounded-[12px] px-[20px] pl-[20px] pr-[10px]"
+              className="absolute bg-slate flex flex-col gap-[8px] right-[0] w-max shadow-2xl rounded-[12px] px-[20px] pl-[20px] pr-[10px]"
             >
               {countriesMenu.map((country) => {
                 if (country !== selectedCountry) {
@@ -125,7 +125,7 @@ const LanguageChangeComponent: FC<LanguageProps> = ({
                       onClick={() => handleCountrySelection(country)}
                     >
                       <p
-                        className={`w-[44px] xl:w-[60px] select-none font-normal text-left text-[18px] xl:text-[20px] text-customDark`}
+                        className={`w-[44px] xl:w-[60px] select-none font-normal text-left text-[18px] xl:text-[20px] text-snow`}
                       >
                         {country.name}
                       </p>

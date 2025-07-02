@@ -40,7 +40,7 @@ const MovieCastSection: FC<Props> = ({ movieId }) => {
 
         <Carousel
           withIndicators
-          height={560}
+          height={600}
           slideSize="20%"
           slideGap="md"
           emblaOptions={{ loop: true, align: "start", slidesToScroll: 3 }}

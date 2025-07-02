@@ -26,7 +26,7 @@ const MoviePage: FC = () => {
 
   if (loading)
     return (
-      <p className="text-center py-8 text-white">Loading movie details...</p>
+      <p className="text-center py-8 text-snow">Loading movie details...</p>
     );
 
   if (!movieDetails)

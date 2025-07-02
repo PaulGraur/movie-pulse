@@ -68,7 +68,7 @@ const Modal: FC<ModalProps> = ({
           onClick={onClose}
         >
           <motion.div
-            className="bg-white p-6 w-full h-full max-h-full overflow-auto relative"
+            className="bg-snow p-6 w-full h-full max-h-full overflow-auto relative"
             variants={
               {
                 fade: {
@@ -108,7 +108,7 @@ const Modal: FC<ModalProps> = ({
               <button
                 onClick={onClose}
                 aria-label="Close modal"
-                className="xl:hidden px-0 hover:bg-transparent bg-[#fff]"
+                className="xl:hidden px-0 hover:bg-transparent bg-snow"
               >
                 <Image src={Close} alt="Close" width={60} height={60} />
               </button>

@@ -52,7 +52,7 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
     >
       <div
         onClick={toggleOpen}
-        className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-4 py-3 rounded-lg shadow-md flex justify-between items-center"
+        className="bg-gradient-to-r from-blue-600 to-indigo-700 text-snow px-4 py-3 rounded-lg shadow-md flex justify-between items-center"
       >
         <span>{selectedOption ? selectedOption.name : placeholder}</span>
         <svg
@@ -72,7 +72,7 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
       </div>
 
       {isOpen && (
-        <ul className="absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+        <ul className="absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-lg bg-snow shadow-lg ring-1 ring-black ring-opacity-5">
           <li
             onClick={() => handleSelect(null)}
             className="px-4 py-2 hover:bg-indigo-100 cursor-pointer"
